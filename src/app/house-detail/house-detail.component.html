@@ -1,0 +1,75 @@
+<div *ngIf="house">
+
+    <h1>{{ house.name }}</h1>
+
+    <div *ngIf="house.coatOfArms" role="list">
+        <h2>Coat of Arms</h2>
+        <p>{{ house.coatOfArms }}</p>
+    </div>
+
+    <div *ngIf="house.words" role="list">
+        <h2>Words</h2>
+        <p>{{ house.words }}</p>
+    </div>
+
+    <div *ngIf="house.currentLord" role="list">
+        <h2>Current Lord</h2>
+        <p>{{ house.currentLord.name }}</p>
+    </div>
+
+    <div *ngIf="house.overlord" role="list">
+        <h2>Overlord</h2>
+        <p>{{ house.overlord.name }}</p>
+    </div>
+
+    <div *ngIf="house.region" role="list">
+        <h2>Region</h2>
+        <p>{{ house.region }}</p>
+    </div>
+
+    <div *ngIf="house.founded" role="list">
+        <h2>Founded</h2>
+        <p>{{ house.founded }}</p>
+    </div>
+
+    <div *ngIf="house.founder" role="list">
+        <h2>Founder</h2>
+        <p>{{ house.founder.name }}</p>
+    </div>
+
+    <div *ngIf="house.heir" role="list">
+        <h2>Heir</h2>
+        <p>{{ house.heir.name }}</p>
+    </div>
+
+    <div *ngIf="house.diedOut" role="list">
+        <h2>Died out</h2>
+        <p>{{ house.diedOut }}</p>
+    </div>
+
+    <div *ngIf="house.titles[0] && house.titles[0].length > 0" role="list">
+        <h2>Titles</h2>
+        <p><span class="comma-sep" *ngFor="let title of house.titles">{{ title }}</span></p>
+    </div>
+
+    <div *ngIf="house.seats[0] && house.seats[0].length > 0" role="list">
+        <h2>Seats</h2>
+        <p><span class="comma-sep" *ngFor="let seat of house.seats">{{ seat }}</span></p>
+    </div>
+
+    <div *ngIf="house.ancestralWeapons[0] && house.ancestralWeapons[0].length > 0" role="list">
+        <h2>Ancestral Weapons</h2>
+        <p *ngFor="let ancestralWeapon of house.ancestralWeapons">{{ ancestralWeapon }}</p>
+    </div>
+
+    <div *ngIf="house.cadetBranches[0]" role="list">
+        <h2>Cadet Branchs</h2>
+        <p><span class="comma-sep" *ngFor="let cadetBranche of house.cadetBranches">{{ cadetBranche.name }}</span></p>
+    </div>
+
+    <div *ngIf="house.swornMembers[0]" role="list">
+        <h2>Sworn Members</h2>
+        <p><span class="comma-sep" *ngFor="let swornMember of house.swornMembers">{{ swornMember.name }}</span></p>
+    </div>
+
+</div>

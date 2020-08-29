@@ -1,0 +1,11 @@
+h2 {
+  margin: 0;
+}
+
+.comma-sep:before {
+  content: ', ';
+}
+
+.comma-sep:first-of-type:before {
+  content: '';
+}

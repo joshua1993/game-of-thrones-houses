@@ -1,0 +1,10 @@
+{
+  "/gotapi": {
+    "target": "https://anapioficeandfire.com",
+    "secure": true,
+    "pathRewrite": {
+      "^/gotapi": ""
+    },
+    "changeOrigin": true
+  }
+}
